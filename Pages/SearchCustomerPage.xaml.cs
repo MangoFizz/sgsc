@@ -20,12 +20,19 @@ namespace SGSC.Pages
     /// </summary>
     public partial class SearchCustomerPage : Page
     {
+        private int page = 1;
+        private int rows = 20;
+
         public SearchCustomerPage()
         {
             InitializeComponent();
             creditAdvisorSidebar.Content = new Frames.CreditAdvisorSidebar("searchCustomer");
 		}
 
+        private void PopulateCustomerTable()
+        {
+
+        }
 		private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
 

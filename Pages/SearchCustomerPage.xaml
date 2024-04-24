@@ -49,7 +49,13 @@
 
         <SGSC:TextBoxName Style="{StaticResource CustomTextBoxStyle}" FontSize="18" VerticalContentAlignment="Center" Margin="650,188,223,487" Grid.ColumnSpan="2"/>
         <Label Style="{StaticResource CustomLabelStyle}" FontSize="20" Content="Filtrar por CURP" HorizontalAlignment="Left" Margin="650,157,0,0" VerticalAlignment="Top" Width="149" Height="21"/>
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="2" Margin="194,268,74,116" FontSize="18" SelectionChanged="DataGrid_SelectionChanged">
+        <DataGrid Name="tblCustomers" Background="White" Grid.ColumnSpan="2" Margin="194,268,74,116" FontSize="18" SelectionChanged="DataGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nombre completo" Binding="{Binding Name}" Width="375"/>
+                <DataGridTextColumn Header="CURP" Binding="{Binding CURP}" Width="*"/>
+                <DataGridTextColumn Header="Teléfono" Binding="{Binding Phone}" Width="*"/>
+                <DataGridTextColumn Header="Correo" Binding="{Binding Email}" Width="*"/>
+            </DataGrid.Columns>
         </DataGrid>
     </Grid>
 </Page>
