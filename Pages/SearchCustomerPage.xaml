@@ -25,10 +25,6 @@
     </Page.Resources>
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="433*"/>
-            <ColumnDefinition Width="207*"/>
-        </Grid.ColumnDefinitions>
         <Border Background="White" Grid.ColumnSpan="2">
             <Rectangle Style="{StaticResource RoundedRectangleHomeStyle}"  Margin="131,113,20,22"/>
         </Border>
@@ -37,14 +33,14 @@
 
         <Frame x:Name="creditAdvisorSidebar" Margin="0,0,758,0"/>
 
-        <Frame Margin="2,0,-2,0" Grid.ColumnSpan="2">
+        <Frame Margin="2,0,-2,0" Grid.ColumnSpan="2" Navigated="Frame_Navigated">
             <Frame.Content>
                 <frames:UserSessionFrame Margin="831,23,38,612"/>
             </Frame.Content>
         </Frame>
 
 
-        <SGSC:TextBoxName x:Name="tbName" Style="{StaticResource CustomTextBoxStyle}" FontSize="18" VerticalContentAlignment="Center" Margin="190,188,269,487"/>
+        <SGSC:TextBoxName x:Name="tbName" Style="{StaticResource CustomTextBoxStyle}" FontSize="18" VerticalContentAlignment="Center" Margin="190,188,683,487"/>
         <Label Style="{StaticResource CustomLabelStyle}" FontSize="20" Content="Filtrar por nombre" HorizontalAlignment="Left" Margin="190,157,0,0" VerticalAlignment="Top" x:Name="NombreLabel" Width="177" Height="21"/>
 
         <SGSC:TextBoxName Style="{StaticResource CustomTextBoxStyle}" FontSize="18" VerticalContentAlignment="Center" Margin="650,188,223,487" Grid.ColumnSpan="2"/>
@@ -57,5 +53,9 @@
                 <DataGridTextColumn Header="Correo" Binding="{Binding Email}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Button Style="{StaticResource ButtonStyleCancel}" Content="Cancelar" FontSize="22" HorizontalAlignment="Left" Margin="617,624,0,0" VerticalAlignment="Top" Height="54" Width="180" Click="CancelRegister" />
+        <Button Style="{StaticResource ButtonStyleCancel}" Content="Nuevo Cliente" FontSize="22" HorizontalAlignment="Left" Margin="818,624,0,0" VerticalAlignment="Top" Height="54" Width="180" Click="CancelRegister" />
+        <Button Style="{StaticResource ButtonStyleConfirm}" Content="Seleccionar" FontSize="22" HorizontalAlignment="Left" Margin="1022,624,0,0" VerticalAlignment="Top" Width="180" Height="54" Click="BtnClicContinue" />
+        <StackPanel Margin="190,619,67,40"/>
     </Grid>
 </Page>
