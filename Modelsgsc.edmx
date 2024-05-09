@@ -135,6 +135,7 @@
     <Property Name="InternalNumber" Type="nvarchar(max)" Nullable="true" />
     <Property Name="CustomerId" Type="int" Nullable="false" />
     <Property Name="Colony" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="State" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="CustomerContactInfoes">
     <Key>
@@ -429,6 +430,7 @@
           <Property Name="CustomerId" Type="Int32" Nullable="false" />
           <Property Name="Colony" Type="String" Nullable="false" />
           <NavigationProperty Name="Customer" Relationship="sgscModel.CustomerAddressCustomer" FromRole="CustomerAddress" ToRole="Customer" />
+          <Property Name="State" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="CustomerContactInfo">
           <Key>
@@ -706,6 +708,7 @@
           <ScalarProperty Name="InternalNumber" ColumnName="InternalNumber" />
           <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
           <ScalarProperty Name="Colony" ColumnName="Colony" />
+          <ScalarProperty Name="State" ColumnName="State" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

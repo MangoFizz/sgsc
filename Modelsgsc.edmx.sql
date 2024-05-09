@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 04/08/2024 00:24:35
--- Generated from EDMX file: C:\Users\xjerr\source\repos\MangoFizz\sgsc\Modelsgsc.edmx
+-- Date Created: 05/09/2024 10:08:50
+-- Generated from EDMX file: C:\Users\aiwass\source\repos\MangoFizz\sgsc\Modelsgsc.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -164,7 +164,8 @@ CREATE TABLE [dbo].[CustomerAddresses] (
     [ExternalNumber] nvarchar(max)  NULL,
     [InternalNumber] nvarchar(max)  NULL,
     [CustomerId] int  NOT NULL,
-    [Colony] nvarchar(max)  NOT NULL
+    [Colony] nvarchar(max)  NOT NULL,
+    [State] nvarchar(max)  NOT NULL
 );
 GO
 
